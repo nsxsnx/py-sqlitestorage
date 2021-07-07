@@ -35,5 +35,5 @@ class sqlite_storage:
         self._conn.close()
 
 p = sqlite_storage(DB_NAME)
-for line in open(FIEL_NAME):
+for line in open(FILE_NAME):
     p.add(line.strip())
