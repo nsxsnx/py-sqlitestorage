@@ -3,6 +3,7 @@ import sqlite3, threading
 from datetime import datetime
 
 DB_NAME = 'database.db'
+FILE_NAME = 'data.txt'
 
 class sqlite_storage:
     _conn, _c, _counter, commit_limit = None, None, 0, 0
@@ -34,5 +35,5 @@ class sqlite_storage:
         self._conn.close()
 
 p = sqlite_storage(DB_NAME)
-for line in open('data.txt'):
+for line in open(FIEL_NAME):
     p.add(line.strip())
